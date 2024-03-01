@@ -24,7 +24,7 @@ export default function Parks() {
   return (
     <div className='flex flex-col gap-6'>
       <p className='text-3xl font-bold'>Parks</p>
-      <Search handleSubmit={handleSubmit} setInput={setInput} />
+      <Search placeholder='City, State' handleSubmit={handleSubmit} setInput={setInput} />
       {parks && <p className='text-3xl font-bold'>{parks[0]?.near_by}</p>}
       <Grid cells={parks} buttonText={'Find games'} />
     </div>

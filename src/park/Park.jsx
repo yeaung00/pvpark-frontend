@@ -59,7 +59,7 @@ export default function Park() {
         <Card {...park} buttonText={''} games={games} />
         <Highlights />
       </div>
-      <Search handleSubmit={handleSubmit} setInput={setInput} input={input} />
+      <Search placeholder='Game name' handleSubmit={handleSubmit} setInput={setInput} input={input} />
       <div className="flex items-center gap-3">
         <p className='text-3xl font-bold'>Games</p>
         <button onClick={() => setOpenModal(true)} className='bg-emerald-700 text-white border rounded-md p-2 text-xl w-fit'>New game</button>
