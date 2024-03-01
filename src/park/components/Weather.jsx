@@ -10,7 +10,7 @@ export default function Weather({ city, state }) {
   const [weather, setWeather] = useState({})
   useEffect(() => {
     async function getWeather() {
-      const apiUrl = `http://localhost:3001/api/${state.toLowerCase()}/${city.toLowerCase()}/weather`
+      const apiUrl = `https://pvpark-api.vercel.app/api/${state.toLowerCase()}/${city.toLowerCase()}/weather`
       const weatherRes = await fetch(apiUrl)
       const weatherData = await weatherRes.json()
       setWeather(weatherData)
