@@ -3,7 +3,7 @@ import supabase from "./client";
 async function signInWithGoogle() {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
-    options: { redirectTo: "http://127.0.0.1:5173/parks"}
+    options: { redirectTo: "https://pvpark-frontend.vercel.app/parks"}
   })
   if (error) { 
     console.log(error)
