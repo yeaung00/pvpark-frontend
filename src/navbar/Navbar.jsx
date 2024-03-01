@@ -12,7 +12,7 @@ export default function Navbar() {
         <Link to='/'>
           <img 
             className='w-32 rounded-md'
-            src="/public/pvparks.svg" 
+            src="/pvparks.svg" 
             alt="pvparks logo"
           />
         </Link>
