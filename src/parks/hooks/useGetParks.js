@@ -7,10 +7,11 @@ export default function useGetParks() {
   useEffect(() => {
     async function initiateParks() {
       let previousParkSearched = localStorage.getItem('previousParkSearched');
-      let city, state;
-      if (!previousParkSearched) {
-        city = 'orange county'
-        state = 'ca'
+      let city = 'orange county', state = 'ca';
+      if (previousParkSearched) {
+        const parsedSearch = JSON.parse(previousParkSearched)
+        city = parsedSearch.city
+        state = parsedSearch.state
       }
       let parksData
       try {

@@ -6,7 +6,6 @@ export default function useGetPlayerCountInPark(parkId, games) {
   const [gameCount, setGameCount] = useState()
   useEffect(() => {
     async function getPlayerCount() {
-      console.log(parkId)
       const gameCountData = await getPlayerCountInPark(parkId)
       setGameCount(gameCountData)
     }
